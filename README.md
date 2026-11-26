@@ -23,8 +23,8 @@ cost a lockout or an afternoon. Content is checked against RouterOS **7.25.2 sta
   (it is 10, target-scope 5), and a scheduler `interval=1d` combined with `days=` (not
   supported).
 - **Covers what breaks networks.** Five new skills cover bridge VLANs, Wi-Fi, routing, VPN and
-  maintenance. These are the areas where a wrong command locks you out, and each skill
-  includes a Safe Mode workflow for remote changes.
+  maintenance. These are the areas where a wrong command locks you out, and the skills
+  include Safe Mode workflows for remote changes.
 - **Light on context.** Each `SKILL.md` stays under 400 lines. Long tables and examples live in
   `references/` and are loaded only when the task needs them.
 
