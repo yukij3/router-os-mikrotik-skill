@@ -8,6 +8,26 @@ correct v7 menu paths, CLI and REST syntax, safe change workflows and the gotcha
 cost a lockout or an afternoon. Content is checked against RouterOS **7.25.2 stable** and
 **7.24.7 long-term** (November 2026), using the official MikroTik documentation and changelogs.
 
+## Why these skills
+
+- **Current.** Written against 7.25.2, not against what a model remembers from v6 forums.
+  Features newer than 7.12 carry the version that introduced them, and each skill has a
+  table of renamed and removed menus, so the agent stops suggesting `/ip route rule` or
+  `wifiwave2`.
+- **Sourced, not guessed.** Every fact traces back to manual.mikrotik.com or a changelog
+  entry, and the facts were checked a second time by an independent pass. Where the docs are
+  silent or contradict each other, the skill says so instead of inventing a parameter.
+- **Fixes real mistakes.** Some of the errors corrected here: `streaming-server=IP:port`
+  (invalid; the port is a separate parameter), RADIUS CoA on port 1700 (it is 3799), hotspot
+  "RADIUS overrides local users" (local users are checked first), connected-route scope 0
+  (it is 10, target-scope 5), and a scheduler `interval=1d` combined with `days=` (not
+  supported).
+- **Covers what breaks networks.** Five new skills cover bridge VLANs, Wi-Fi, routing, VPN and
+  maintenance. These are the areas where a wrong command locks you out, and each skill
+  includes a Safe Mode workflow for remote changes.
+- **Light on context.** Each `SKILL.md` stays under 400 lines. Long tables and examples live in
+  `references/` and are loaded only when the task needs them.
+
 ## Skills
 
 | Area | Skill | Purpose |
