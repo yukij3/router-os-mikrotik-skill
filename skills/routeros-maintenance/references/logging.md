@@ -40,7 +40,7 @@ Referenced from `routeros-maintenance` SKILL.md.
 | `vrf` | 7.19.6+ |
 | `remote-protocol` | `udp`, `tcp` (7.18+), `tls` (7.23+, with `check-certificate=`) |
 | `remote-log-format` | `default`, `syslog`, `cef` (7.18+) |
-| `syslog-time-format` | `bsd-syslog`, `iso8601` (millisecond precision 7.18+) |
+| `syslog-time-format` | `bsd-syslog`, `iso8601` |
 | `add-topics-string` | `yes`/`no` (7.22+) |
 | `syslog-facility`, `syslog-severity` | |
 

@@ -23,7 +23,7 @@ Configuration flows profile -> peer -> identity -> proposal -> policy:
 |---|---|
 | 7.14 | `x25519` DH group |
 | 7.16 | Defaults: `dpd-interval` `2m` -> `8s`, `dpd-maximum-failures` `5` -> `4` |
-| 7.21 | Post-quantum PPK: `ppk` = `no`, `psk`, `qkd`, `psk-ike-initial` with QKD integration |
+| 7.21 / 7.24 | Post-quantum PPK/QKD support (7.21); `/ip/ipsec/peer ppk-secret`; `/system/keymat-provider` with `type=qkd|hkdf` (7.24). Other PPK flags: verify with `/ip/ipsec/peer/add ?` |
 | 7.22 | `ddos-cookie-threshold`; `modp8192` removed on MIPS |
 | 7.23 | Netlink SA/policy handling |
 | 7.25 | Route-based IPsec with `/interface/xfrm` |

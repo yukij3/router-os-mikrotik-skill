@@ -34,10 +34,10 @@ VRF support added in recent versions:
 | Feature | VRF support | Version |
 |---|---|---|
 | DHCPv4 relay | `dhcp-server-vrf` | 7.15 |
-| `/ip/service` | `vrf=` on all services; `ftp` gained it in 7.17 | 7.17 for ftp |
+| `/ip/service` | `vrf=` on services; `ftp` per 7.17 changelog (the VRF guide still lists ftp as unsupported — verify) | 7.17 for ftp |
 | OpenVPN server | `vrf=` | 7.17 |
 | `/system/logging/action` | `vrf=` | 7.19.6 |
-| `/ip/dns` | `vrf=` and `servers=<ip>@<vrf>` | 7.21 |
+| `/ip/dns` | `vrf=` (7.15); `servers=<ip>@<vrf>` and `:resolve` in a VRF (7.21) | 7.15 / 7.21 |
 | WireGuard | `vrf=` for the encrypted UDP socket only | 7.21 |
 | TFTP | VRF support | 7.25 |
 

@@ -33,7 +33,7 @@ Flags worth knowing in prints: `+` = ECMP route, `F` = filtered, `H` = eligible 
 | DHCP | 1 (`default-route-distance` on the DHCP client) |
 | eBGP | 20 |
 | OSPF | 110 |
-| RIP | 120 |
+| RIP | 120 (v6 default; v7 default not documented — verify) |
 | iBGP | 200 |
 | BGP VPN leaked routes | 200 |
 

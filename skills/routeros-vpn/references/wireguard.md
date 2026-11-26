@@ -42,7 +42,7 @@ Referenced from `routeros-vpn` SKILL.md.
 
 Since 7.21 `show-client-config` needs the `show-sensitive` user policy.
 
-> Caveat: documentation disagrees on the default of `client-allowed-address` (`0.0.0.0/0, ::/0` vs `::/0`). Set it explicitly when it matters.
+> Default `client-allowed-address` is `0.0.0.0/0, ::/0` (WireGuard guide); set it explicitly for split tunnels.
 
 ## Import / Export
 
