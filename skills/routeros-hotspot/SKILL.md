@@ -121,6 +121,8 @@ Use a consistent `comment=` tag for idempotent add/remove. Without it, repeated 
 **IP vs HTTP walled garden:**
 - `/ip/hotspot/walled-garden/ip` — layer 3 match by destination host, applied BEFORE authentication. Use for HTTPS destinations.
 - `/ip/hotspot/walled-garden` — layer 7 URL pattern match, requires HTTP. Does NOT work for HTTPS.
+- Action enums differ: `walled-garden` uses `action=allow|deny` (default `allow`); `walled-garden/ip` uses `action=accept|drop|reject`.
+- In `walled-garden/ip`, `dst-address` and `dst-address-list` are **ignored** when `dst-host` is set (the host is resolved dynamically).
 
 ## SSL Certificate Note
 

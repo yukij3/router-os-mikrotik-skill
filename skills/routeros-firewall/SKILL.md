@@ -49,6 +49,12 @@ Dynamic entries with `timeout=` expire automatically — the primary pattern for
 
 **DNS-name entries:** an address-list entry can be a domain name; RouterOS resolves it and keeps dynamic IP entries. Since **7.21**, when several names resolve to the same IP, the highest DNS TTL is used as the dynamic entry timeout.
 
+**Address-list traps (7.25 docs):**
+- Short-form ranges like `203.0.113.1-254` are silently stored as an unresolvable DNS name that matches nothing. Write the full range: `203.0.113.1-203.0.113.254`. IPv6 lists accept addresses/prefixes only, no ranges.
+- Deleting a list that contains DNS names with one `remove [find list=X]` fails with `no such item` (resolved dynamic entries vanish mid-iteration). Run `remove [find list=X !dynamic]`, then `remove [find list=X]`.
+- In `export file=... where ...`, put `file=` before `where`, or `where` swallows it into the condition.
+- Maximum `timeout` is `35w3d13h13m56s`.
+
 **Automatic population (7.17+):** `/ip/dhcp-server` and `/ipv6/dhcp-server` have `address-list=` (adds bound lease addresses); `/ipv6/dhcp-client` has `prefix-address-list=`. PPP supports `MT-Address-List` for IPv6 DHCPv6+RADIUS since **7.24**.
 
 ## Interface-Lists as Rule Selectors
